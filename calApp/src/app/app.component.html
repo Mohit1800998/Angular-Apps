@@ -1,0 +1,25 @@
+<div>
+   Enter First Number <input type="text" id="v1" #v1>
+   Enter Second Number <input type="text" id="v2" #v2>
+
+    <input type="button" (click)="doSum(v1.value,v2.value)" value="Do Sum"/>
+    <label>Sum is :: {{sum}} </label>
+</div>
+
+<div>
+   Enter First Number <input type="text" id="v3" #v3>
+   Enter Second Number <input type="text" id="v4" #v4>
+
+    <input type="button" (click)="doMul(v3.value,v4.value)" value="Do Mul"/>
+    <label>Multiplication is :: {{mul}} </label>
+
+</div> 
+
+<div>
+    Enter the number <input type="text" id="v5" #v5>
+    <input type="button" (click)="getc(v5.value)" value="Get Factor" />
+    <tr *ngFor="let a of fac">
+    <td>{{a}}</td>
+    </tr>
+
+</div>
