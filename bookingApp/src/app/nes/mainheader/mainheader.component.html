@@ -1,0 +1,30 @@
+<div class="mainSubPanel">
+        Hotel Name  <input placeholder="Search by Name, City or Price" style="width:90%;" type="text" name="search" [(ngModel)]="searchText"  />
+    </div>
+    <hr/>
+
+    <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Hotel Name</th>
+      <th scope="col">City</th>
+      <th scope="col">Princing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let hotel of hotelArr | filter:searchText" >
+        <td> <input type="checkbox" name="selectedHotel" 
+                                      (click)="addHotel(hotel)"/> </td>
+            <td>{{hotel.hotelName}}</td>
+            <td>{{hotel.city}}</td>
+            <td>{{hotel.pricing}}</td>
+        </tr>
+        
+    <input type="button" (click)="doThis()" value="Compare Selected"/>
+  </tbody>
+  <tr *ngFor="let h of selectedHotelArrr">
+    <td>{{h.hotelName}}
+<td>{{h.city}}
+<td>{{h.pricing}}
+</tr>
+</table>
